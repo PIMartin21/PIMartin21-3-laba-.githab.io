@@ -2,60 +2,39 @@ body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;;
     background-color: #bac2ba;
 }
-.flex{
-    display: flex;
-    flex-direction: row;
-}
- ul {
-    margin: 0px auto;
-    max-width: 800px;
-    width: 90%;
-}
 .header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     background: #5e9c5e;
 }
-.header .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* align-items: center; */
-}
-.header__list {
-    display: flex;
-    align-items: left;
-    gap: 40px;
-    list-style: none;
-    margin: 0;
-    padding-left: 10%;
-    padding-top: 0px;
-}
-
-.header__nav {
-    display: flex;
-    justify-self: center;
-    width: 100%;
-}
-
-.header__navbar {
+.URL {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.header__nav {
+    display: flex;
+    /* align-items: end; */
+    margin: 10px;
+    padding: 10px;
+}
+.nav-link{
+    color: #000000;
+    text-decoration: none;
+    gap: 20px;
+    font-size: 24px;
+    margin-right: 20px;
 }
 
-h1, .header__nav {
+.nav-link:last-child {
+    margin-right: 0;
+}
+
+h1, .header__nav /*ccылки шапки*/  {
+    justify-content: end;
     margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 680px;
-    margin: 0 auto;
-}
-footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #ddd;
+    padding: 5px;
 }
 
 footer {
@@ -69,138 +48,36 @@ footer p {
     margin: 0;
     color: #000000;
 }
-table {
+.table {
+    display: flex;
     margin: 20px auto;
-    width: 100%;
-    max-width: 800px;
+    justify-content: center;
+    max-width: 960px;
 }
 td {
     padding: 10px;
     height: 20px; /* фиксированная высота ячеек */
 }
-@media (max-width: 768px) {
-    /* Мобильные устройства (до 768px) */
-        .header { 
-            background: #5e9c5e;
-            padding: 10px 0;
-            img[usemap] {
-        max-width: 100%;
-        height: auto;
-    }
-    img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-        }
-    }
 
-        .header__container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .header__logo {
-            width: 60px;
-            height: auto;
-            min-width: 60px;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            text-align: center;
-        }
-
-        .header__navbar {
-            width: 100%;
-        }
-
-        .header__nav {
-            width: 100%;
-        }
-
-        .header__list {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header__list a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            white-space: nowrap;
-        }
+.main {
+    display: flex;
+    flex-direction: column;
 }
-@media (max-width: 992px) {
-    .header__container {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 0 20px;
-            }
 
-            .header__logo {
-                width: 70px;
-            }
-
-            .header h1 {
-                font-size: 28px;
-            }
-
-            .header__list {
-                gap: 30px;
-            }
-
-            .header__list a {
-                font-size: 18px;
-            }
-
-            table {
-                width: 90%;
-                font-size: 17px;
-            }
-
-            td {
-                padding: 15px;
-            }
-
-            form {
-                width: 80%;
-            }
-        }
-
-@media (max-width: 1200px) {
-    .header__container {
-        max-width: 1200px;
-        }
-        ul {
-            max-width: 1000px;
-            }
-
-        table {
-         max-width: 1100px;
-        }
+@media screen and (max-width: 800px) {
+    .header {
+        flex-direction: column;
     }
 
+    .nav-link {
+        margin-left: 0;
+    }
 
+    .header__nav {
+        flex-direction: column;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    .table {
+        order: -1;
+    }
+}

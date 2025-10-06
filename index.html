@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>List of hyperlinks</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="header__container">
-            <img src="image1.jpg" width="8%"  alt= "Логотип" class="header__logo"> 
-            <h1>KUBSU</h1>
-            <div class="header__navbar">
-                <nav class= "header__nav">
-                    <ul class="header__list">
-                        <li><a href ="#!">About us</a></li> 
-                        <li><a href = "#!">News</a></li>
-                        <li><a href = "#!">Contacts</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <img src="image1.jpg" width="30%"  alt= "Логотип" class="header__logo"> 
+            <h1>KUBSU</h1></div>
+            <nav class= "header__nav">
+                <a href ="#!" class="nav-link">About us</a>
+                <a href = "#!" class="nav-link">News</a>
+                <a href = "#!" class="nav-link">Contacts</a>
+            </nav>
         </div>
     </header>
-        <div>
+    
+    <main class="main">
+        <div class="URL">
             <ul>
             <li><a href="http://kubsu.ru">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
                 <li><a href="https://kubsu.ru">абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
@@ -36,7 +35,7 @@
                 <li><a href="../second.html">относительная ссылка на страницу уровнем выше текущего</a></li>
                 <li><a href="../../third.html">относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
                 <li><a href="https://ru.wikipedia.org/wiki/Python">ссылка на фрагмент страницы стороннего сайта</a></li>
-                <li><img src="image.jpg" width="500px" usemap="#map"></li>
+                <li><img src="image.jpg" width="300px" usemap="#map"></li>
                 <li><a href="">ссылка с пустым href</a></li>
                 <li><a>ссылка без href</a></li>
                 <li><a href="https://ya.ru" rel="nofollow">ссылка, по которой запрещен переход поисковикам</a></li>
@@ -50,7 +49,7 @@
 
         </div>
 
-
+        <div class="table">
         <table border="1">
                 <tr>
                     <td colspan= "5" align = "center" bgcolor="#3CB371"  >Таблица разрядных нормативов по плаванию для мужчин и женщин</td>
@@ -86,57 +85,59 @@
                     <td align = "center" bgcolor="#00FF7F"> 29,40 сек. </td>
                 </tr>
         </table>
-        <form>
-            <label for="">
-                ФИО
-                <input name="fio" type="text" >
-            </label>
-            <label for="">
-                Телефон
-                <input name="phone" type="tel">
-            </label>
-            <label for="">
-                Email
-                <input name="email" type="email">
-            </label>
-            <label for="">
-                Дата рождения
-                <input name="date" type="date">
-            </label>
-            <label for="">
-                Пол
-                <input name="pol" type="radio">
-            </label>
-            <label for="">
-                Любимый язык программирования
-                <select name="lang" id="">
-                    <option value="1">Pascal</option>
-                    <option value="2">C</option>
-                    <option value="3">C++</option>
-                    <option value="4">JavaScript</option>
-                    <option value="5">PHP</option>
-                    <option value="6">Python</option>
-                    <option value="7">Java</option>
-                    <option value="8">Haskel</option>
-                    <option value="9">Clojure</option>
-                    <option value="10">Prolog</option>
-                    <option value="11">Scala</option>
-                </select>
-            </label>
-            <label for="">
-                Биография
-                <textarea name="biography" id="#textarea"></textarea>
-            </label>
-            <label for="">
-                С контрактом ознакомлен
-                <input type="checkbox">
-            </label>
-            <button type="submit">Сохранить</button>
-        </form>
-    <map name="map">
-        <area shape="circle" coords="75,75,75" href="https://kubsu.ru">
-        <area shape="rect" coords="20,20,20,20" href="https://ya.ru" alt="">
-    </map>
+        </div>
+            <form>
+                <label for="">
+                    ФИО
+                    <input name="fio" type="text" >
+                </label>
+                <label for="">
+                    Телефон
+                    <input name="phone" type="tel">
+                </label>
+                <label for="">
+                    Email
+                    <input name="email" type="email">
+                </label>
+                <label for="">
+                    Дата рождения
+                    <input name="date" type="date">
+                </label>
+                <label for="">
+                    Пол
+                    <input name="pol" type="radio">
+                </label>
+                <label for="">
+                    Любимый язык программирования
+                    <select name="lang[]" id="" multiple="multiple">
+                        <option value="1">Pascal</option>
+                        <option value="2">C</option>
+                        <option value="3">C++</option>
+                        <option value="4">JavaScript</option>
+                        <option value="5">PHP</option>
+                        <option value="6">Python</option>
+                        <option value="7">Java</option>
+                        <option value="8">Haskel</option>
+                        <option value="9">Clojure</option>
+                        <option value="10">Prolog</option>
+                        <option value="11">Scala</option>
+                    </select>
+                </label>
+                <label for="">
+                    Биография
+                    <textarea name="biography" id="#textarea"></textarea>
+                </label>
+                <label for="">
+                    С контрактом ознакомлен
+                    <input type="checkbox">
+                </label>
+                <button type="submit">Сохранить</button>
+            </form>
+        <map name="map">
+            <area shape="circle" coords="75,75,75" href="https://kubsu.ru">
+            <area shape="rect" coords="20,20,20,20" href="https://ya.ru" alt="">
+        </map>
+    </main>
 
     <footer>
     <p>&copy; Мартин Дорохов</p>
