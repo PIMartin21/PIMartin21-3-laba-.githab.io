@@ -4,37 +4,37 @@ body {
 }
 .header { 
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-between; /*распределение пространства между элементами */
+    align-items: flex-start; /*выравнивание по верху */
     background: #5e9c5e;
 }
 .URL {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*центрирует по горизонтали */
+    align-items: center; /*центрирует по вертикали */
 }
 .header__nav {
     display: flex;
     /* align-items: end; */
-    margin: 10px;
-    padding: 10px;
+    margin: 10px; /*внешний отступ */
+    padding: 10px; /*внутренний отступ */
 }
 .nav-link{
     color: #000000;
-    text-decoration: none;
-    gap: 20px;
-    font-size: 24px;
-    margin-right: 20px;
+    text-decoration: none; /*убиратет подчеркивание */
+    gap: 20px; /*расстояние между ссылками */
+    font-size: 24px; /*размер шрифта */
+    margin-right: 20px; /*отступ справа */
 }
 
 .nav-link:last-child {
-    margin-right: 0;
+    margin-right: 0; /*убирает отступ у последней ссылки */
 }
 
 h1, .header__nav /*ccылки шапки*/  {
-    justify-content: end;
-    margin: 0;
-    padding: 5px;
+    justify-content: end; /*выравнивание по правому краю */
+    margin: 0; /*убирает внешние отступы */
+    padding: 5px; /*добавляет втнутренниие отступы */
 }
 
 footer {
@@ -43,6 +43,11 @@ footer {
     padding: 20px;
     margin-top: 40px;
     border-top: 1px solid #5e9c5e;
+}
+.conteiner-wrap {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
 }
 footer p {
     margin: 0;
@@ -62,6 +67,9 @@ td {
 .main {
     display: flex;
     flex-direction: column;
+    max-width: 960px;
+    width: 100%;
+    justify-content: center;
 }
 
 @media screen and (max-width: 800px) {

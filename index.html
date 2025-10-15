@@ -18,14 +18,14 @@
             </nav>
         </div>
     </header>
-    
+    <div class = conteiner-wrap>
     <main class="main">
         <div class="URL">
             <ul>
-            <li><a href="http://kubsu.ru">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+                <li><a href="http://kubsu.ru">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
                 <li><a href="https://kubsu.ru">абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
                 <li><a href=""><img src="image.jpg" alt="image" width="300px"></a></li>
-                <li><a href="index1.html">сокращенная ссылка на внутреннюю страницу</a></li>
+                <li><a href="index.html">сокращенная ссылка на внутреннюю страницу</a></li>
                 <li><a href="/">сокращенная ссылка на главную страницу</a></li>
                 <li><a href="#fragment">ссылка на фрагмент текущей страницы</a></li>
                 <li><a href="?name=Martin&birthday=21.04.2006&age=19">ссылка с тремя параметрами в URL</a></li>
@@ -34,7 +34,7 @@
                 <li><a href="./about/index.html">относительная ссылка на страницу в каталоге about</a></li>
                 <li><a href="../second.html">относительная ссылка на страницу уровнем выше текущего</a></li>
                 <li><a href="../../third.html">относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-                <li><a href="https://ru.wikipedia.org/wiki/Python">ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li><a href="https://ru.wikipedia.org/wiki/Python#fragment">ссылка на фрагмент страницы стороннего сайта</a></li>
                 <li><img src="image.jpg" width="300px" usemap="#map"></li>
                 <li><a href="">ссылка с пустым href</a></li>
                 <li><a>ссылка без href</a></li>
@@ -44,46 +44,49 @@
                     <li><a href="https://online.sberbank.ru/CSAFront/index.do" title="Сбербанк">Ссылка 1</a></li>
                     <li><a href="https://google.com" title="Поисковик Гугл">Ссылка 2</a></li>
                 </ol>
-                <li><a href="ftp://user:password@ftp.mycompany.com/reports/data.zip">ссылка на файл с протоколом ftp</a></li>
+                <li><a href="ftp://username:password@ftp.example.com/path/file.zip">ссылка на файл с протоколом ftp и авторизацией</a></li>
             </ul>
-
+            <map name="map">
+                <area shape="circle" coords="75,75,75" href="https://kubsu.ru">
+                <area shape="rect" coords="100,100,100,100" href="https://ya.ru" alt="">
+            </map>
         </div>
-
         <div class="table">
         <table border="1">
-                <tr>
+                    <tr>
                     <td colspan= "5" align = "center" bgcolor="#3CB371"  >Таблица разрядных нормативов по плаванию для мужчин и женщин</td>
-                </tr>
+                    </tr>
                 <tr>
                     <td  colspan = "2" align= "center", bgcolor= "#00FF7F"> Вид и дистанция</td>
                     <td align = "center" bgcolor= "#00FF7F"> МСМК </td>
                     <td align = "center" bgcolor= "#00FF7F"> МС </td>
                     <td align = "center" bgcolor= "#00FF7F"> КМС </td>
                 </tr>
+                    <tr>
                 <td  colspan = "1"  align= "center", bgcolor="#3CB371"> Вольный стиль (мужчины)</td>
                     <td   align="center" bgcolor="#3CB371"> 50 метров </td>
                     <td align = "center" bgcolor="#3CB371"> 21.99 сек. </td>
                     <td align = "center" bgcolor="#3CB371"> 23,40 сек. </td>
-                    <td align = "center" bgcolor="#3CB371"> 24,15 сек. </td>
-                </tr>
+                    <td rowspan="4" align = "center" bgcolor="#3CB371"> 24,15 сек. </td>
+                    </tr>
+                <tr>
                 <td  colspan = "1"  align= "center", bgcolor="#00FF7F"> Вольный стиль (женщины)</td>
                     <td  align =  "center" bgcolor="#00FF7F"> 50 метров </td>
                     <td align = "center" bgcolor="#00FF7F"> 24,78 сек. </td>
                     <td align = "center" bgcolor="#00FF7F"> 26,70 сек. </td>
-                    <td align = "center" bgcolor="#00FF7F"> 27,50 сек </td>
                 </tr>
+                    <tr>
                 <td  colspan = "1"  align= "center" bgcolor="#3CB371"> Баттерфляй (мужчины)</td>
                     <td  align =  "center" bgcolor="#3CB371"> 50 метров </td>
                     <td align = "center" bgcolor="#3CB371"> 23,70 сек </td>
                     <td align = "center" bgcolor="#3CB371"> 24,90 сек. </td>
-                    <td align = "center" bgcolor="#3CB371"> 25,90 сек. </td>
-                </tr>
+                    
+                    </tr>
+                <tr>
                 <td  colspan = "1"  align= "center" bgcolor="#00FF7F"> Баттерфляй (женщины)</td>
-                    <td  align =  "center" bgcolor="#00FF7F"> 50 метров </td>
+                    <td align =  "center" bgcolor="#00FF7F"> 50 метров </td>
                     <td align = "center" bgcolor="#00FF7F"> 26,20 сек. </td>
                     <td align = "center" bgcolor="#00FF7F"> 28,25 сек. </td>
-                    <td align = "center" bgcolor="#00FF7F"> 29,40 сек. </td>
-                </tr>
         </table>
         </div>
             <form>
@@ -105,8 +108,11 @@
                 </label>
                 <label for="">
                     Пол
-                    <input name="pol" type="radio">
-                </label>
+                <lable id="pol" >  Введите ваш пол:
+                        <input type="radio" name="pol" checked="checked" id="pol" value="pol"/>Мужчина</lable>
+                <lable id="poll" >
+                <input type="radio" name="pol" value="poll" id="poll"/>
+                Женщина</lable><br>
                 <label for="">
                     Любимый язык программирования
                     <select name="lang[]" id="" multiple="multiple">
@@ -133,12 +139,8 @@
                 </label>
                 <button type="submit">Сохранить</button>
             </form>
-        <map name="map">
-            <area shape="circle" coords="75,75,75" href="https://kubsu.ru">
-            <area shape="rect" coords="20,20,20,20" href="https://ya.ru" alt="">
-        </map>
-    </main>
-
+        </main>
+        </div>
     <footer>
     <p>&copy; Мартин Дорохов</p>
 </footer>
